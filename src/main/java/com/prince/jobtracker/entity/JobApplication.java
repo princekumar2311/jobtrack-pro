@@ -20,6 +20,10 @@ public class JobApplication {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    @Column(nullable = false)
     private String companyName;
 
     private String role;
